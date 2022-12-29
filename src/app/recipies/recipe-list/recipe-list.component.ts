@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from '../recipe.modal';
 
 @Component({
   selector: 'app-recipe-list',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
-  recipies=[];
+  recipies: Recipe[]= [
+    new Recipe('A test Recipe','this is simply a test',"https://www.bonappetit.com/recipe/baked-ziti-spaghetti-squash")
+  ];
 
   constructor() {}
 
